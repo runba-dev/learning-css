@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="ja">
+	<head>
+		<title>Other element Selector</title>
+		<meta charset="UTF-8">
+		<style>
+			/* 特定の親を持つ要素のみにスタイルをあてる*/
+			div > p {
+				background-color: yellow;
+			}
+			a + p{
+				background-color: blue;
+			}
+		</style>
+	</head>
+	<body>
+		<div>
+			<h2> ほうれん草</h2>
+			<p>ここは黄色になる</p>
+		</div>
+		<div>
+			<span>
+				<p>これは親要素がDivでないので黄色にならない</p>
+			</span>
+		</div>
+		<div>
+			<a href="">はい</a>
+			<p>ここは青色になる</p>
+		</div>
+	</body>
+</html>
