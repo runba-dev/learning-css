@@ -8,9 +8,17 @@
 			div > p {
 				background-color: yellow;
 			}
+			/* aタグの直下にあるpタグにスタイルをあてる*/
+			/* タグでしか無理？っぽい*/
 			a + p{
 				background-color: blue;
 			}
+			/* 前にあるelementと同じ親を持つelementにスタイルをあてる */
+			/* クラスでもできた */
+			.test ~ ul {
+				background: green;
+			}
+
 		</style>
 	</head>
 	<body>
@@ -24,8 +32,20 @@
 			</span>
 		</div>
 		<div>
-			<a href="">はい</a>
+			<a  clas="test">はい</a>
 			<p>ここは青色になる</p>
+		</div>
+		<div>
+			<p class="test">こんにちは</p>
+			<ul>
+				<li>ここは緑色になるよ</li>
+				<li>同階層でｐタグが出現したらそれ以降のulタグにスタイルをあてるよ</li>
+			</ul>
+			<span>間を少しあけても</span>
+			<ul>
+				<li>緑色になるでしょ？</li>
+				<li>ほうれん草</li>
+			</ul>
 		</div>
 	</body>
 </html>
