@@ -8,9 +8,8 @@
 			div > p {
 				background-color: yellow;
 			}
-			/* aタグの直下にあるpタグにスタイルをあてる*/
-			/* タグでしか無理？っぽい*/
-			a + p{
+			/* 右辺で指定した要素の直後にある 右辺で指定した要素スタイルをあてる*/
+			.test + p{
 				background-color: blue;
 			}
 			/* 前にあるelementと同じ親を持つelementにスタイルをあてる */
@@ -18,10 +17,15 @@
 			.test ~ ul {
 				background: green;
 			}
+			/* 指定の属性を持つ要素に対してスタイルを充てる*/
+			[href] {
+				background-color: lightblue;
+			}
 
 		</style>
 	</head>
 	<body>
+		<h1> 特定の親を持つ要素のみにスタイルをあてる</h1>
 		<div>
 			<h2> ほうれん草</h2>
 			<p>ここは黄色になる</p>
@@ -31,10 +35,12 @@
 				<p>これは親要素がDivでないので黄色にならない</p>
 			</span>
 		</div>
+		<h1>aタグの直後にあるpタグに対してスタイルをあてる。</h1>
 		<div>
-			<a  clas="test">はい</a>
+			<a class="test">はい</a>
 			<p>ここは青色になる</p>
 		</div>
+		<h1>前にあるelementと同じ親を持つelementにスタイルをあてる</h1>
 		<div>
 			<p class="test">こんにちは</p>
 			<ul>
@@ -45,6 +51,17 @@
 			<ul>
 				<li>緑色になるでしょ？</li>
 				<li>ほうれん草</li>
+			</ul>
+		</div>
+		<h1>特定の属性を持つ要素にスタイルをあてる</h1>
+		<div>
+			<ul>
+				<li>
+					<a href="">こいつはhref属性を持つ</a>
+				</li>
+				<li>
+					<a >こいつはhref属性を持たない</a>
+				</li>
 			</ul>
 		</div>
 	</body>
