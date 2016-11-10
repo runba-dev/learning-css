@@ -21,6 +21,31 @@
 			[href] {
 				background-color: lightblue;
 			}
+			/* 指定の属性の値を持つ要素に対してスタイルをあてる*/
+			[data-index = one] {
+				background-color: lightgreen;
+			}
+			/* 指定の属性の値を含む要素に対してスタイルをあてる*/
+			[data-index ~= doing] {
+				background-color: pink;
+			}
+			/* 属性の値の先頭の項目を指定してスタイルをあてる */
+			[data-index|=he] {
+				background-color: purple;
+			}
+			/* 属性の値の先頭の文字列を指定してスタイルをあてる*/
+			[data-index^=https] {
+				background-color: brown;
+			}
+			/* 属性の値の最後が指定した値とマッチするときスタイルをあげる */
+			[data-index$=exe] {
+				background-color: black; 
+				color: white;
+			}
+			/* 属性の値に指定した値が含まれるときにスタイルをあてる */
+			[data-index*=gray] {
+				background-color: gray;
+			}
 
 		</style>
 	</head>
@@ -64,5 +89,13 @@
 				</li>
 			</ul>
 		</div>
+		<ul>
+			<li data-index="one">data-index="one"</li>
+			<li data-index="doing done">data-index="doing done"</li>
+			<li data-index="he-llo">data-index="he-llo"</li>
+			<li data-index="https://">data-index="https://"</li>
+			<li data-index="kobito.exe">data-index="kobito.exe"</li>
+			<li data-index="wawagray-waa">data-index="wawagray-waa"</li>
+		</ul>
 	</body>
 </html>
