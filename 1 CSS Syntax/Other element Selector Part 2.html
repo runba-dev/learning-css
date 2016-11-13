@@ -26,11 +26,15 @@
 			textarea:empty {
 				background: red;
 			}
+			span:first-child:active {
+				background-color: yellow;
+			}
 		</style>
 	</head>
 	<body>
+		<p>aaa</p>
 		<h1>:acrive</h1>
-		<p class="active">クリックし続けている、アクティブな要素を指定することができる</a>
+		<p class="active">クリックし続けている、アクティブな要素を指定することができる</p>
 		<h1>::after</h1>
 		<p class="after">コンテンツの最後にコンテンツを追加</p>
 		<h1>::before</h1>
@@ -43,7 +47,15 @@
 			<input type="text" disabled="disabled" value="disabled">
 			<h1>:empty</h1>
 			<textarea></textarea>
-
 		</form>
+		<h1>:first-child</h1>
+		<p>spanをダブルクリックするとバックが変わる章</p>
+		<div>
+			<span>このspanはdiv要素の中の最初の子供</span>
+		</div>
+		<div>
+			<p>これは段落</p>
+			<span href="">このspanはdiv要素の2番目の子供だから、スタイルがあてられない</span>
+		</div>
 	</body>
 </html>
