@@ -17,6 +17,12 @@
 				height: 50px;
 				width: 50px;
 			}
+			input[type="text"]:enabled {
+				background: #ffff00;
+			}
+			input[type="text"]:disabled {
+				background: #dddddd;
+			}
 		</style>
 	</head>
 	<body>
@@ -29,6 +35,9 @@
 		<form action="">
 			<input type="checkbox" checked="checked"> I have a bike<br>
 			<input type="checkbox"> I have a car
+			<h1>:enabled & disabled</h1>
+			<input type="text" value="enabled">
+			<input type="text" disabled="disabled" value="disabled">
 		</form>
 	</body>
 </html>
