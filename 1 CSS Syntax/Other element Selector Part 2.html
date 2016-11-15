@@ -29,6 +29,11 @@
 			span:first-child:active {
 				background-color: yellow;
 			}
+			.first-letter::first-letter {
+				font-size: 20px;
+				color: white;
+				background-color: black;
+			}
 		</style>
 	</head>
 	<body>
@@ -49,13 +54,15 @@
 			<textarea></textarea>
 		</form>
 		<h1>:first-child</h1>
-		<p>spanをダブルクリックするとバックが変わる章</p>
+		<p>一番最初のspanをダブルクリックするとバックが変わる章</p>
 		<div>
 			<span>このspanはdiv要素の中の最初の子供</span>
 		</div>
 		<div>
-			<p>これは段落</p>
+			<p>これはdivの中の段落</p>
 			<span href="">このspanはdiv要素の2番目の子供だから、スタイルがあてられない</span>
 		</div>
+		<h1>:first-letter</h1>
+			<p class="first-letter">最初の文字に対してスタイルを充てることができる</p>
 	</body>
 </html>
